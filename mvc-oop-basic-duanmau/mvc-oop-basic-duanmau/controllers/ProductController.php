@@ -11,8 +11,8 @@ class ProductController
 
     public function Home()
     {
-        $title = "Đây là trang chủ nhé hahaa";
-        $thoiTiet = "Hôm nay trời có vẻ là mưa";
+        include "views/partials/header.php";
         require_once './views/trangchu.php';
+        include "views/partials/footer.php";
     }
 }
