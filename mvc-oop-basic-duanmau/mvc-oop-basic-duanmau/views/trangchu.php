@@ -17,12 +17,15 @@
     </form>
 </div>
 <div class="product-list">
+        <?php foreach ($data as $value): ?>
     <div class="product-item">
-        <img src="/Tavantruog1702/mvc-oop-basic-duanmau/mvc-oop-basic-duanmau/assets/img/product1.png" alt="Sản phẩm 1" class="product-img">
-        <h3 class="product-name">Sản phẩm 1</h3>
-        <p class="product-price">500.000đ</p>
-        <button class="product-buy">Mua ngay</button>
+            <p><strong><?= $value->product_id ?></strong></p>
+            <p>Giá: <?= number_format($value->price) ?> VNĐ</p>
+            <?php if($value->image_url): ?>
+                <img src="<?= $value->image_url ?>" width="100" alt="">
+            <?php endif; ?>
     </div>
+        <?php endforeach; ?>
 </div>
 </body>
 </html>
