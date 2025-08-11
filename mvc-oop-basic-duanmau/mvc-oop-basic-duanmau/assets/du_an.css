@@ -1,4 +1,3 @@
-
 #main-bg {
     width: 100vw;
     height: 700px;
@@ -196,14 +195,21 @@
     margin: 40px 0;
 }
 .product-item {
-    background: #FFFBEA;
+    background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(255, 224, 102, 0.12);
     padding: 24px;
     width: 260px;
     text-align: center;
     transition: box-shadow 0.3s;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
 }
+.product-item p {
+    color: #000; /* đen */
+    font-weight: bold;
+}
+
 .product-item:hover {
     box-shadow: 0 8px 32px rgba(255, 224, 102, 0.25);
 }
@@ -237,7 +243,7 @@
 .product-buy:hover {
     background: #FFC300;
 }
-     * {
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -367,3 +373,289 @@
       margin-top: 10px;
       text-align: center;
     }
+    .adm-nav {
+      background-color: #48ffa0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .adm-nav .adm-nav-brand {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .adm-nav-links {
+      display: flex;
+      gap: 15px;
+    }
+    .adm-nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .adm-nav-links a.active {
+      text-decoration: underline;
+    }
+    .adm-container {
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .adm-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    .adm-table th, .adm-table td {
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: center;
+    }
+    .adm-table th {
+      background-color: #e9ecef;
+    }
+    .adm-btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .adm-btn-edit {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .adm-btn-delete {
+      background-color: #dc3545;
+      color: #fff;
+    }
+    .adm-btn-add {
+      background-color: #28a745;
+      color: #fff;
+      margin-bottom: 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .adm-btn:hover {
+      opacity: 0.85;
+    }
+    .add-product-wrapper {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            padding: 32px 28px;
+        }
+        .add-product-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            color: #28a745;
+        }
+        .add-product-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .add-product-form input,
+        .add-product-form textarea,
+        .add-product-form select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .add-product-form textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .add-product-form button {
+            background: #28a745;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .add-product-form button:hover {
+            background: #218838;
+        }
+        /* Giảm độ rộng cột Tiêu đề trong bảng admin */
+.adm-table td:nth-child(5),
+.adm-table th:nth-child(5) {
+    max-width: 180px;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sanpham {
+  position: relative;
+  padding: 30px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+/* Ẩn mặc định và trượt xuống 25% */
+.animated-box {
+  opacity: 0;
+  transform: translateY(25%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: #fff5cc;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+/* Khi hover vào .sanpham thì div con trượt lên và hiện ra */
+.sanpham:hover .animated-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hh a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+:root{
+    --footer-bg: #00000088;
+    --footer-fg: #fff;
+    --muted: #cccccc;
+    --max-w: 1100px;
+  }
+  .site-footer{
+    background: var(--footer-bg);
+    color: var(--footer-fg);
+    padding: 36px 16px 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  .footer-container{
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .site-name{ margin:0; font-size:1.25rem; }
+  .tagline{ color:var(--muted); margin-top:6px; font-size:0.95rem; }
+
+  .footer-nav ul{ list-style:none; padding:0; margin:0; }
+  .footer-nav li + li{ margin-top:8px; }
+  .footer-nav a{
+    color:var(--footer-fg);
+    text-decoration:none;
+    font-size:0.95rem;
+  }
+  .footer-nav a:hover, .footer-nav a:focus{
+    text-decoration:underline;
+    outline: 2px dashed #fff3; /* keyboard focus */
+  }
+
+  .contact h4{ margin:0 0 8px 0; font-size:1rem; }
+  address{ font-style:normal; color:var(--muted); font-size:0.95rem; }
+  address a{ color:var(--footer-fg); text-decoration:none; }
+  .social{ margin-top:10px; display:flex; gap:10px; }
+  .social-link{ display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px;
+    border-radius:6px; background:transparent; color:var(--footer-fg); text-decoration:none; }
+  .social-link svg{ display:block; }
+
+  .footer-bottom{ border-top:1px solid #ffffff16; margin-top:20px; padding-top:14px; text-align:center; color:var(--muted); font-size:0.9rem; }
+
+  /* responsive */
+  @media (max-width: 800px){
+    .footer-container{ grid-template-columns: 1fr; text-align:left; }
+  }
+
+  /* utility for screen-reader-only */
+  .visually-hidden{
+    position:absolute !important;
+    height:1px; width:1px; overflow:hidden;
+    clip:rect(1px, 1px, 1px, 1px); white-space:nowrap;
+  }
+  .hover-trangchu{
+    width: 60px;
+    height: 50px;
+    background: rgb(197, 197, 197);
+    border-radius: 50px;
+    position: fixed;
+    top: 87%;
+    left: 93%;
+  }
+  .hover-trangchu a{
+    margin-left: 7px;
+  }
+      .wrapper {
+        background: #67665f;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+        min-height: 100vh;
+    }
+
+    .tabs {
+        display: flex;
+        border-bottom: 2px solid #444;
+        cursor: pointer;
+        position: relative;
+    z-index: 10;
+    }
+    .tab {
+        padding: 16px 32px;
+        font-weight: 700;
+        color: #d0d0d0;
+        font-size: 1.2rem;
+        letter-spacing: 0.03em;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    .tab:hover {
+        color: #FFD700;
+    }
+    .tab.active {
+        color: #FFC107;
+    }
+    .tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #FFD700, #FFA500);
+        border-radius: 3px;
+    }
+    .tab-content {
+        display: none;
+        padding: 24px 0;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        animation: fadeIn 0.4s ease;
+        color: #eee;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+    .product-detail-hover {
+  margin-top: 15px;
+}
+.banner, .search-product {
+    position: relative; /* hoặc static nếu đang absolute/fixed */
+    z-index: 1;
+}
+
+
+

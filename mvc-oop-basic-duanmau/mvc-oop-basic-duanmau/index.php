@@ -10,6 +10,7 @@ require_once './commons/function.php'; // Hàm hỗ trợ
 
 // Require toàn bộ file Controllers
 require_once './controllers/ProductController.php';
+require_once './controllers/AdminController.php';
 
 // Require toàn bộ file Models
 require_once './models/ProductModel.php';
@@ -29,5 +30,12 @@ match ($action) {
     'register' => $_SERVER['REQUEST_METHOD'] === 'POST'
         ? (new AuthController())->handleAuth()
         : (new AuthController())->loginForm(),
-    'logout' => (new AuthController())->handleAuth(), // Thêm dòng này
+    'logout' => (new AuthController())->handleAuth(),
+    'admin-user' => (new AdminController())->userPage(),
+    'admin-product' => (new AdminController())->productPage(),
+    'add_product' => $_SERVER['REQUEST_METHOD'] === 'POST'
+        ? (new ProductController())->addProduct()
+        : (new AdminController())->addProductPage(),
+    'fix-product' => (new ProductController())->fixProduct(),
+    'delete-product' => (new ProductController())->deleteProduct(),
 };

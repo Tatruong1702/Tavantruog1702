@@ -24,9 +24,18 @@ if (session_status() === PHP_SESSION_NONE) {
         <img src="/Tavantruog1702/mvc-oop-basic-duanmau/mvc-oop-basic-duanmau/assets/img/Logo (2).png" class="logo" alt="">
       </div>
       <div class="nav-right">
-        <a href="<?= BASE_URL ?>index.php?action=login" class="buttontt">Đăng nhập</a>
-        <a href="<?= BASE_URL ?>index.php?action=login" class="buttontt">Đăng kí</a>
-
+        <?php if (isset($_SESSION['username'])): ?>
+            <form action="<?= BASE_URL ?>index.php" method="post" style="display:inline;">
+                <input type="hidden" name="action" value="logout">
+                <button type="submit" class="buttontt">Đăng xuất</button>
+            </form>
+        <?php else: ?>
+            <a href="<?= BASE_URL ?>index.php?action=login" class="buttontt">Đăng nhập</a>
+            <a href="<?= BASE_URL ?>index.php?action=login" class="buttontt">Đăng kí</a>
+        <?php endif; ?>
+          <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+            <a href="<?= BASE_URL ?>index.php?action=admin-user" class="buttontt">Quản lý</a>
+        <?php endif; ?>
       </div>
     </header>
 
