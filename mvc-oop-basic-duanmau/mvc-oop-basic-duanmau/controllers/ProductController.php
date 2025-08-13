@@ -22,6 +22,25 @@ class ProductController
         $data = $productModel->GetAllProduct();
         require_once '/laragon/www/Tavantruog1702/mvc-oop-basic-duanmau/mvc-oop-basic-duanmau/models/ProductModel.php';
     }
+    public function detailProduct()
+{
+    require_once './models/ProductModel.php';
+
+    $id = $_GET['id'] ?? null;
+    if (!$id) {
+        header('Location: index.php');
+        exit();
+    }
+
+    $data = $this->modelProduct->GetOneProduct($id);
+
+    // Nếu không tìm thấy sản phẩm
+    if (!$data) {
+        header('Location: index.php');
+        exit();
+    }
+    require_once './views/admin/detail-product.php';
+}
     public function addProduct()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

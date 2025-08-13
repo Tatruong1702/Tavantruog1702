@@ -38,4 +38,5 @@ match ($action) {
         : (new AdminController())->addProductPage(),
     'fix-product' => (new ProductController())->fixProduct(),
     'delete-product' => (new ProductController())->deleteProduct(),
+    'detail-product' => (new ProductController())->detailProduct(),
 };

@@ -34,7 +34,7 @@
             <p><?= number_format($value["price"]) ?> VNĐ</p>
             <!-- Ô xem chi tiết xuất hiện khi hover -->
             <div class="product-detail-hover hh">
-                <a href="<?= BASE_URL ?>index.php?action=product-detail&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
+                <a href="<?= BASE_URL ?>index.php?action=detail-product&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
             </div>
     </div>
         <?php endforeach; ?>
@@ -54,7 +54,7 @@
             <p><?= number_format($value["price"]) ?> VNĐ</p>
             <!-- Ô xem chi tiết xuất hiện khi hover -->
             <div class="product-detail-hover hh">
-                <a href="<?= BASE_URL ?>index.php?action=product-detail&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
+                <a href="<?= BASE_URL ?>index.php?action=detail-product&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
             </div>
     </div>
     <?php endif; ?>
@@ -79,7 +79,7 @@
             <p><?= number_format($value["price"]) ?> VNĐ</p>
             <!-- Ô xem chi tiết xuất hiện khi hover -->
             <div class="product-detail-hover hh">
-                <a href="<?= BASE_URL ?>index.php?action=product-detail&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
+                <a href="<?= BASE_URL ?>index.php?action=detail-product&id=<?= $value['product_id'] ?>" class="detail-btn animated-box">Xem chi tiết</a>
             </div>
     </div>
     <?php endif; ?>
