@@ -12,7 +12,7 @@
   <nav class="adm-nav">
     <a href="#" class="adm-nav-brand">Admin</a>
     <div class="adm-nav-links">
-      <a href="#">Người dùng</a>
+      <a href="<?= BASE_URL ?>index.php?action=admin-user">Người dùng</a>
       <a href="#" class="active">Sản phẩm</a>
     </div>
     <a style="color:white;" href="<?= BASE_URL ?>index.php">Quay về trang chủ</a>

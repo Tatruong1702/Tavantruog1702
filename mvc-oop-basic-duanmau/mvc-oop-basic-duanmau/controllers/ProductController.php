@@ -25,20 +25,8 @@ class ProductController
     public function detailProduct()
 {
     require_once './models/ProductModel.php';
-
-    $id = $_GET['id'] ?? null;
-    if (!$id) {
-        header('Location: index.php');
-        exit();
-    }
-
-    $data = $this->modelProduct->GetOneProduct($id);
-
-    // Nếu không tìm thấy sản phẩm
-    if (!$data) {
-        header('Location: index.php');
-        exit();
-    }
+    $id = (int)$_GET['id'];
+    $data = $this->modelProduct->getOneProduct($id);
     require_once './views/admin/detail-product.php';
 }
     public function addProduct()

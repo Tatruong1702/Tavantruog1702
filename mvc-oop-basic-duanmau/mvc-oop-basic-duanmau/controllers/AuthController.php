@@ -22,7 +22,7 @@ class AuthController
 
                 $user = UserModel::findByEmail($email);
                 if (!$user) {
-                    $_SESSION['error'] = "❌ Không tìm thấy người dùng với email: $email";
+                    $_SESSION['error'] = "Không tìm thấy người dùng với email: $email";
                     header("Location: index.php?action=login");
                     exit();
                 }

@@ -15,7 +15,7 @@
       <a href="#" class="active">Người dùng</a>
       <a href="<?= BASE_URL ?>index.php?action=admin-product">Sản phẩm</a>
     </div>
-    <span style="color:white;">Quản trị viên</span>
+    <a style="color:white;" href="<?= BASE_URL ?>index.php">Quay về trang chủ</a>
   </nav>
 
   <!-- Nội dung -->

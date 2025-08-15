@@ -4,6 +4,9 @@
         // Trang quản lý user
         public function userPage()
         {
+            require_once './models/UserModel.php';
+            $userModel = new UserModel();
+            $data = $userModel->getAllUser();
             include './views/admin/adm-user.php';
         }
 

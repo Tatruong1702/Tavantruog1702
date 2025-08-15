@@ -40,4 +40,12 @@ class UserModel {
         $stmt = $conn->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
         return $stmt->execute([$username, $email, $password, $role]);
     }
+    public function getAllUser()
+    {
+        $sql = "
+            SELECT * FROM users
+        ";
+        $stmt = $this->conn->query($sql);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

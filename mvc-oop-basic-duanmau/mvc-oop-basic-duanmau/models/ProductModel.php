@@ -24,7 +24,7 @@ class ProductModel
         $stmt = $this->conn->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function GetOneProduct($product_id)
+    public function getOneProduct($product_id)
     {
         $sql = "
             SELECT products.*, categories.name as categoryName
