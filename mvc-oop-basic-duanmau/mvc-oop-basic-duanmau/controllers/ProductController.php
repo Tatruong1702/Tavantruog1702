@@ -28,6 +28,7 @@ class ProductController
     $id = (int)$_GET['id'];
     $data = $this->modelProduct->getOneProduct($id);
     require_once './views/admin/detail-product.php';
+    include "views/partials/footer.php";
 }
     public function addProduct()
     {
